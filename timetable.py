@@ -443,7 +443,7 @@ class Timetable(QWidget):
                         uid = uuid.uuid4()
                         summary = task[0].title()
                         location = ''
-                        description = ''
+                        description = task[0].title()
                         sequence = int([sq for sq in self.data[0] if 'SEQUENCE' in sq][0].split(':')[1]) + 1
 
 
