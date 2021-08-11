@@ -910,25 +910,28 @@ class Timetable(QWidget):
         # temp data stores each individual task which is then added to the data array
         temp_data = []
         # with open('main.ics', 'r') as f:
-        with open(file, 'r') as f:
-            for line in f:
-                # stores data between begin:vevent and end:vevent
-                # as it contains the (a)synchronous task information
-                if line.strip() == 'BEGIN:VEVENT':
-                    # self.temp stores the line as a element in the array
-                    temp_data = []
-                    temp_data.append(line.strip())
-                elif line.strip() == 'END:VEVENT':
-                    # when we reach the end of the task we add temp as a collective
-                    # to self.main which contains all of the tasks
-                    # self.temp is cleared to store the next tasks information
-                    temp_data.append(line.strip())
-                    self.data.append(temp_data)
-                    temp_data = []
-                elif line.strip() == 'BEGIN:VCALENDAR':
-                    continue
-                else:
-                    temp_data.append(line.strip())
+        try:
+            with open(file, 'r') as f:
+                for line in f:
+                    # stores data between begin:vevent and end:vevent
+                    # as it contains the (a)synchronous task information
+                    if line.strip() == 'BEGIN:VEVENT':
+                        # self.temp stores the line as a element in the array
+                        temp_data = []
+                        temp_data.append(line.strip())
+                    elif line.strip() == 'END:VEVENT':
+                        # when we reach the end of the task we add temp as a collective
+                        # to self.main which contains all of the tasks
+                        # self.temp is cleared to store the next tasks information
+                        temp_data.append(line.strip())
+                        self.data.append(temp_data)
+                        temp_data = []
+                    elif line.strip() == 'BEGIN:VCALENDAR':
+                        continue
+                    else:
+                        temp_data.append(line.strip())
+        except FileNotFoundError:
+            sys.exit(app.exec_()
         print(self.data)
 
 
@@ -938,6 +941,6 @@ if __name__ == '__main__':
     options = QFileDialog.Options()
     options |= QFileDialog.DontUseNativeDialog
     file, _ = QFileDialog.getOpenFileName(None, "ICS File", "", "ICS Files (*.ics)", options = options)
-    main = Timetable('main.ics')
+    main = Timetable(file)
     app.setQuitOnLastWindowClosed(True)
     sys.exit(app.exec_())
