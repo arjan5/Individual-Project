@@ -12,3 +12,4 @@ The application can also be built from the Python source code with the module py
 pip install pyinstaller
 pyinstaller --onefile --windowed timetable.py
 ```
+Open the dist folder and the application for your system should be ready to run
