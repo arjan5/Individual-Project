@@ -26,6 +26,8 @@ You can select the week of the timetable in the dropdown box in the top left box
 
 Now you should be able to see your asynchronous tasks in the bottom left box.
 The top right box allows you to input custom tasks, note that the task added will use the selected date in the calendar, so select a date beforehand.
+![Adding a custom task](https://github.com/arjan5/Individual-Project/blob/main/docs/images/Screenshot%20from%202021-08-09%2001-30-42.png)
+
 The bottom right box contains the amount of changes made to the asynchronous tasks and the amount of custom tasks that have been added.
 Finally, you have the 'Generate new timetable' which will run your changes against the constraint solver and output a new calendar (.ics) file to your desktop.
 
