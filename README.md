@@ -18,9 +18,7 @@ The output is put in the folder where the timetable.py file is stored, recommend
 Open the dist folder and the application for your system should be ready to run
 
 Once the application is running, select your .ics file to load your university timetable.
-x-special/nautilus-clipboard
-copy
-file:///home/arjan/Pictures/Screenshot%20from%202021-08-07%2016-11-04.png
+![Selecting .ics file]
 
 
 You can select the week of the timetable in the dropdown box in the top left box or select a date in the interactive calendar on the far right.
