@@ -22,6 +22,8 @@ Once the application is running, select your .ics file to load your university t
 
 
 You can select the week of the timetable in the dropdown box in the top left box or select a date in the interactive calendar on the far right.
+![Data loaded into the applicaton](https://github.com/arjan5/Individual-Project/blob/main/docs/images/Screenshot%20from%202021-08-07%2016-11-17.png)
+
 Now you should be able to see your asynchronous tasks in the bottom left box.
 The top right box allows you to input custom tasks, note that the task added will use the selected date in the calendar, so select a date beforehand.
 The bottom right box contains the amount of changes made to the asynchronous tasks and the amount of custom tasks that have been added.
